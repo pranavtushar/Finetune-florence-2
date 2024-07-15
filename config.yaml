@@ -1,0 +1,18 @@
+paths:
+  dataset_csv: "./CSV/train-test_bedding.csv"
+  image_dir: "./DATASET/train_dataset/"
+  checkpoint_dir: "./checks/"
+
+training:
+  batch_size: 8
+  num_workers: 2
+  epochs: 30
+  learning_rate: 1e-4
+  validation_interval: 5
+
+model:
+  name: "microsoft/Florence-2-large-ft"
+  name_template: "pranavtushar/large-tb-ft-{timestamp}"
+
+prompt:
+  question: "<image_description_ft> Describe the activities of each individuals in the image."
